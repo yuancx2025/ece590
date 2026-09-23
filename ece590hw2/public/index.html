@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      <label for="zip">Enter a zip code</label>
+      <input type="text" id="zip" name="zip" value="27513" />
+      <button type="button" id="get-forecast">Get Forecast</button>
+      <button type="button" id="add-favorite">Add to favorites</button>
+    </p>
+
+    <p id="status" class="status" hidden></p>
+
+    <section id="favorites-section">
+      <h2>Favorites</h2>
+      <p id="favorites-empty">No favorite zip codes yet.</p>
+      <ul id="favorites-list"></ul>
+    </section>
+
+    <section id="weather" hidden>
+      <h1 id="place"></h1>
+      <p>Current Temperature</p>
+      <p id="temp" class="temp"></p>
+      <p>
+        <button type="button" id="toggle-units">Switch to Celsius</button>
+      </p>
+
+      <h2>3 day Forecast</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Conditions</th>
+          </tr>
+        </thead>
+        <tbody id="forecast-body"></tbody>
+      </table>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

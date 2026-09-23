@@ -1,0 +1,47 @@
+export type Favorite = {
+  id: string;
+  zip: string;
+};
+
+export type WeatherCondition = {
+  text: string;
+  icon: string;
+};
+
+export type ForecastDayData = {
+  date: string;
+  day: {
+    maxtemp_c: number;
+    maxtemp_f: number;
+    mintemp_c: number;
+    mintemp_f: number;
+    condition: WeatherCondition;
+  };
+  astro: {
+    sunrise: string;
+    sunset: string;
+  };
+};
+
+export type WeatherData = {
+  location: {
+    name: string;
+    region: string;
+  };
+  current: {
+    temp_c: number;
+    temp_f: number;
+    feelslike_c: number;
+    feelslike_f: number;
+    wind_mph: number;
+    wind_kph: number;
+    wind_dir: string;
+    condition: WeatherCondition;
+  };
+  forecast: {
+    forecastday: ForecastDayData[];
+  };
+  error?: {
+    message: string;
+  };
+};
